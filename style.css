@@ -1,0 +1,785 @@
+/*
+    PERSONAL PORTFOLIO WEBSITE
+    Navy Blue & White Theme
+    Author: Jay Prakash Thakur
+*/
+
+
+/* ==============================
+   COLOR THEME
+   ============================== */
+
+:root {
+    --navy: #0b1f3a;
+    --navy-light: #12345b;
+    --blue: #1d4ed8;
+
+    --white: #ffffff;
+    --light: #f4f7fb;
+    --light-blue: #eaf1f9;
+
+    --text: #172033;
+    --gray: #64748b;
+    --border: #d8e0ea;
+
+    --shadow: 0 8px 25px rgba(11, 31, 58, 0.12);
+
+    --radius: 12px;
+}
+
+
+/* ==============================
+   GLOBAL
+   ============================== */
+
+* {
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    margin: 0;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    line-height: 1.6;
+
+    color: var(--text);
+
+    background: var(--white);
+}
+
+
+img {
+    display: block;
+
+    max-width: 100%;
+
+    height: auto;
+}
+
+
+a {
+    color: var(--navy);
+
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+
+a:hover {
+    color: var(--blue);
+}
+
+
+/* ==============================
+   CONTAINER
+   ============================== */
+
+.container {
+    width: min(1120px, 92%);
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* ==============================
+   HEADER
+   ============================== */
+
+.site-header {
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    background: var(--navy);
+
+    border-bottom: 3px solid var(--blue);
+}
+
+
+.site-header .container {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    min-height: 72px;
+}
+
+
+/* Portfolio Name */
+
+.site-title {
+    color: var(--white);
+
+    font-size: 1.25rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.5px;
+
+    text-decoration: none;
+}
+
+
+.site-title:hover {
+    color: #dbeafe;
+}
+
+
+/* ==============================
+   NAVIGATION
+   ============================== */
+
+.nav-list {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 25px;
+
+    margin: 0;
+
+    padding: 0;
+
+    list-style: none;
+}
+
+
+.nav-list a {
+    color: var(--white);
+
+    font-size: 0.95rem;
+
+    text-decoration: none;
+
+    transition: 0.2s ease;
+}
+
+
+.nav-list a:hover {
+    color: #93c5fd;
+}
+
+
+/* ==============================
+   HERO SECTION
+   ============================== */
+
+.hero {
+    padding: 100px 0 90px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--navy),
+            var(--navy-light)
+        );
+
+    color: var(--white);
+}
+
+
+.hero-grid {
+    display: grid;
+
+    grid-template-columns: 1.4fr 0.8fr;
+
+    align-items: center;
+
+    gap: 70px;
+}
+
+
+.eyebrow {
+    margin: 0 0 15px;
+
+    color: #93c5fd;
+
+    font-size: 0.85rem;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+
+h1 {
+    max-width: 750px;
+
+    margin: 0 0 25px;
+
+    font-size: clamp(2.5rem, 6vw, 4.8rem);
+
+    line-height: 1.1;
+
+    color: var(--white);
+}
+
+
+.hero-text {
+    max-width: 650px;
+
+    margin-bottom: 30px;
+
+    color: #dbeafe;
+
+    font-size: 1.1rem;
+}
+
+
+/* ==============================
+   BUTTONS
+   ============================== */
+
+.hero-actions {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+
+    margin-top: 30px;
+}
+
+
+.button {
+    display: inline-block;
+
+    padding: 12px 22px;
+
+    border: 2px solid var(--white);
+
+    border-radius: 7px;
+
+    background: var(--white);
+
+    color: var(--navy);
+
+    font-weight: 800;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+
+.button:hover {
+    background: transparent;
+
+    color: var(--white);
+
+    border-color: var(--white);
+}
+
+
+.button-secondary {
+    background: transparent;
+
+    color: var(--white);
+
+    border-color: #93c5fd;
+}
+
+
+.button-secondary:hover {
+    background: var(--white);
+
+    color: var(--navy);
+}
+
+
+/* ==============================
+   PROFILE IMAGE
+   ============================== */
+
+.profile-card {
+    margin: 0;
+
+    padding: 12px;
+
+    background: var(--white);
+
+    border: 5px solid #dbeafe;
+
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow);
+}
+
+
+.profile-card img {
+    width: 100%;
+
+    aspect-ratio: 1 / 1;
+
+    object-fit: cover;
+
+    border-radius: 7px;
+}
+
+
+.profile-card figcaption {
+    padding: 15px 5px 5px;
+
+    color: var(--navy);
+
+    text-align: center;
+
+    font-size: 0.9rem;
+
+    font-weight: 700;
+}
+
+
+/* ==============================
+   SECTIONS
+   ============================== */
+
+.section {
+    padding: 80px 0;
+}
+
+
+.section-alt {
+    background: var(--light);
+}
+
+
+.section-label {
+    margin: 0 0 8px;
+
+    color: var(--blue);
+
+    font-size: 0.8rem;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+
+h2 {
+    margin: 0 0 25px;
+
+    color: var(--navy);
+
+    font-size: clamp(2rem, 4vw, 2.8rem);
+
+    line-height: 1.2;
+}
+
+
+h3 {
+    color: var(--navy);
+
+    line-height: 1.3;
+}
+
+
+/* ==============================
+   ABOUT
+   ============================== */
+
+#about p:not(.section-label) {
+    max-width: 800px;
+
+    color: var(--gray);
+
+    font-size: 1.05rem;
+}
+
+
+/* ==============================
+   SKILLS
+   ============================== */
+
+.skills-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+
+    margin: 35px 0 0;
+}
+
+
+.skill-card {
+    padding: 25px;
+
+    background: var(--white);
+
+    border: 1px solid var(--border);
+
+    border-top: 4px solid var(--navy);
+
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow);
+
+    transition: transform 0.2s ease;
+}
+
+
+.skill-card:hover {
+    transform: translateY(-5px);
+}
+
+
+.skill-card dt {
+    margin-bottom: 8px;
+
+    color: var(--navy);
+
+    font-size: 1.15rem;
+
+    font-weight: 800;
+}
+
+
+.skill-card dd {
+    margin: 0;
+
+    color: var(--gray);
+}
+
+
+/* ==============================
+   PROJECTS
+   ============================== */
+
+.projects-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+
+    margin-top: 35px;
+}
+
+
+.project-card {
+    display: flex;
+
+    flex-direction: column;
+
+    padding: 30px;
+
+    background: var(--white);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow);
+
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+
+.project-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 14px 35px rgba(11, 31, 58, 0.16);
+}
+
+
+.project-number {
+    margin: 0;
+
+    color: var(--blue);
+
+    font-size: 0.85rem;
+
+    font-weight: 900;
+}
+
+
+.project-card p {
+    color: var(--gray);
+}
+
+
+.project-card h3 {
+    font-size: 1.35rem;
+}
+
+
+.project-card a {
+    margin-top: auto;
+
+    padding-top: 15px;
+
+    color: var(--blue);
+}
+
+
+.project-card a:hover {
+    color: var(--navy);
+}
+
+
+/* ==============================
+   CONTACT
+   ============================== */
+
+.contact-layout {
+    display: grid;
+
+    grid-template-columns: 0.8fr 1.2fr;
+
+    gap: 50px;
+
+    align-items: start;
+}
+
+
+.contact-form {
+    padding: 30px;
+
+    background: var(--white);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow);
+}
+
+
+.form-field {
+    margin-bottom: 20px;
+}
+
+
+.form-field label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: var(--navy);
+
+    font-weight: 800;
+}
+
+
+.form-field input,
+.form-field textarea {
+    width: 100%;
+
+    padding: 12px 14px;
+
+    border: 1px solid #b8c4d3;
+
+    border-radius: 7px;
+
+    background: var(--white);
+
+    color: var(--text);
+
+    font: inherit;
+}
+
+
+.form-field input:focus,
+.form-field textarea:focus {
+    outline: none;
+
+    border-color: var(--blue);
+
+    box-shadow:
+        0 0 0 3px rgba(29, 78, 216, 0.12);
+}
+
+
+.form-field textarea {
+    resize: vertical;
+}
+
+
+/* Contact Button */
+
+.contact-form .button {
+    border-color: var(--navy);
+
+    background: var(--navy);
+
+    color: var(--white);
+}
+
+
+.contact-form .button:hover {
+    background: var(--blue);
+
+    border-color: var(--blue);
+}
+
+
+/* ==============================
+   FOOTER
+   ============================== */
+
+.site-footer {
+    padding: 30px 0;
+
+    background: #061426;
+
+    color: var(--white);
+
+    text-align: center;
+}
+
+
+.site-footer p {
+    margin: 0;
+
+    color: #cbd5e1;
+}
+
+
+/* ==============================
+   TABLET
+   ============================== */
+
+@media (max-width: 850px) {
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+
+    .profile-card {
+        max-width: 400px;
+
+        margin: 0 auto;
+    }
+
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    .contact-layout {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* ==============================
+   MOBILE
+   ============================== */
+
+@media (max-width: 600px) {
+
+    .site-header .container {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding: 15px 0;
+    }
+
+
+    .nav-list {
+        gap: 12px 18px;
+    }
+
+
+    .hero {
+        padding: 65px 0;
+    }
+
+
+    .section {
+        padding: 60px 0;
+    }
+
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+
+    .skills-grid,
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .hero-actions {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .button {
+        text-align: center;
+    }
+
+
+    .contact-form {
+        padding: 22px;
+    }
+
+}
+
+
+/* ==============================
+   ACCESSIBILITY
+   ============================== */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid #60a5fa;
+
+    outline-offset: 3px;
+}
+
+
+/* Respect users who prefer reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+
+    * {
+        transition: none !important;
+    }
+
+}
