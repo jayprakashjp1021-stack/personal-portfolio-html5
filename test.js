@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function() {
             description: "Learning Python, problem-solving, and software development."
         },
         {
-            image: "Emarket.jpeg",
+            image: "emarket.jpeg",
             title: "Cybersecurity",
             description: "Exploring Linux, networking, and digital security."
         }
