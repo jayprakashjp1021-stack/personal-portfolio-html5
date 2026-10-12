@@ -1,0 +1,308 @@
+/* General Reset and Styling */
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333333;
+    background-color: #faf8f5;
+    /* Light creamy off-white background */
+}
+
+
+/* Gray Theme Navigation Bar */
+
+.navbar-header {
+    background-color: #4a4a4a;
+    /* Dark Grey */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.navbar {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.nav-brand {
+    color: #ffcccc;
+    /* Light red tint for brand */
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #e0e0e0;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: #ff9999;
+    /* Light red hover */
+    text-decoration: underline;
+}
+
+
+/* 3D Motion Canvas Banner */
+
+#canvas-container {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    background: #333333;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+#canvas-container canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.hero-text {
+    position: relative;
+    z-index: 2;
+    color: #ffffff;
+    pointer-events: none;
+}
+
+.hero-text h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: #ffcccc;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.hero-text p {
+    margin: 5px 0 0 0;
+    font-size: 1.1rem;
+    color: #f0ead6;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+
+/* Main Content Containers */
+
+.main-container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+
+/* Content Sections with Light Creamy Yellow Theme */
+
+.content-section {
+    background: #fffdf6;
+    /* Light creamy yellow */
+    border: 1px solid #f0ead6;
+    margin-bottom: 30px;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.04);
+}
+
+.content-section h2 {
+    color: #333333;
+    border-bottom: 2px solid #ffcccc;
+    /* Light red accent line */
+    padding-bottom: 8px;
+    margin-top: 0;
+}
+
+#about img {
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    object-fit: cover;
+    border: 2px solid #f0ead6;
+}
+
+#about::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* --- IMAGE SLIDER STYLES --- */
+
+.slider-section {
+    text-align: center;
+}
+
+.slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    background: #000;
+}
+
+.image-slider {
+    width: 100%;
+}
+
+.image-slider img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    display: block;
+}
+
+.slide-caption {
+    background: rgba(51, 51, 51, 0.85);
+    color: #fff;
+    padding: 10px;
+    text-align: left;
+}
+
+.slide-caption h3 {
+    margin: 0 0 5px 0;
+    font-size: 1.1rem;
+    color: #ffcccc;
+}
+
+.slide-caption p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #f0f0f0;
+}
+
+
+/* Slider Navigation Buttons */
+
+.slider-btn {
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    background: rgba(100, 100, 100, 0.7);
+    color: white;
+    border: none;
+    font-size: 1.4rem;
+    padding: 10px 14px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.2s, transform 0.1s;
+    z-index: 10;
+}
+
+.slider-btn:hover {
+    background: #ff6666;
+}
+
+.slider-btn.prev {
+    left: 10px;
+}
+
+.slider-btn.next {
+    right: 10px;
+}
+
+
+/* Slider Dots */
+
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: #d1cbbd;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dot.active {
+    background-color: #ff6666;
+}
+
+.slider-status {
+    margin-top: 8px;
+    font-size: 0.9rem;
+    color: #666666;
+}
+
+
+/* Project Cards */
+
+.project-card {
+    background: #fff9ee;
+    border: 1px solid #e8dfc8;
+    padding: 15px 20px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+.project-card h3 {
+    margin-top: 0;
+    color: #4a4a4a;
+}
+
+.project-card a,
+.content-section a {
+    color: #cc3333;
+    text-decoration: none;
+}
+
+.project-card a:hover,
+.content-section a:hover {
+    text-decoration: underline;
+}
+
+
+/* Grey Tone Footer */
+
+.footer-container {
+    max-width: 900px;
+    margin: 20px auto 40px auto;
+    padding: 20px;
+    background: #555555;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.footer-container a {
+    color: #ffcccc;
+    text-decoration: none;
+}
+
+.footer-container a:hover {
+    text-decoration: underline;
+}
